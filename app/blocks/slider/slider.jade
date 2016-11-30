@@ -1,0 +1,7 @@
+mixin slider(data)
+	+b.slider&attributes(attributes)
+		+e.scale
+		+e('ul').levels&attributes(attributes)
+			each item in data.levels
+				+e('li').item
+					| #{item}

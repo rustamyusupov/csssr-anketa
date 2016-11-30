@@ -1,0 +1,9 @@
+mixin input-check(data)
+	each item in data
+		+b.input-check
+			+e('input').field&attributes({
+				'id': item.attributes.name,
+				'value': item.label,
+				'type': 'checkbox'
+			}, item.attributes)
+			+e('label').label&attributes({'for': item.attributes.name}) !{item.label}

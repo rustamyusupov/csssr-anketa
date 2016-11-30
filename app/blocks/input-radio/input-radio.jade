@@ -1,0 +1,8 @@
+mixin input-radio(data)
+	each item in data
+		+b.input-radio
+			+e('input').field&attributes(item.attributes, {
+				'value': item.label,
+				'type': 'radio'
+			})
+			+e('label').label&attributes({'for': item.attributes.id}) !{item.label}

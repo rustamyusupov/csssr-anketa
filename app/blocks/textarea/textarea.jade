@@ -1,0 +1,3 @@
+mixin textarea(data)
+	+b('textarea').textarea&attributes({'id': data.attributes.name}, data.attributes)
+		| !{data.value}

@@ -1,0 +1,5 @@
+mixin input-text(data)
+	each item in data
+		+b.input-text
+			+e('label').label&attributes({'for':item.attributes.name}) #{item.label}
+			+e('input').field&attributes({'id':item.attributes.name}, item.attributes)

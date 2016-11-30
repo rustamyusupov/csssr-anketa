@@ -1,0 +1,45 @@
+include ../title/title
+include ../section/section
+include ../subtitle/subtitle
+include ../description/description
+include ../input-text/input-text
+include ../input-check/input-check
+include ../slider/slider
+include ../textarea/textarea
+include ../input-radio/input-radio
+
+mixin profile()
+	-var data = getData('profile')
+	+b('form').profile&attributes(attributes)
+		+title
+			| Дело
+		+section.personal
+			+subtitle
+				| Персональные данные
+			+input-text(data.personal)
+		+section.skills
+			+subtitle
+				| Расскажите о себе чекбоксами
+			+description
+				| Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
+			+input-check(data.skills)
+		+section.javascript
+			+subtitle
+				| Уровень владения JavaScript
+			+slider(data.javascript)
+		+section.summary
+			+subtitle
+				| Расскажите о себе словами
+			+description
+				| Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
+			+textarea(data.summary)
+		+section.plans
+			+subtitle
+				| Какие у вас планы на будущее?
+			+description
+				| Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
+			+input-radio(data.plans)
+		+section.date
+			+subtitle
+				| Дата
+			+input-text(data.date)
