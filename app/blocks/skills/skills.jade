@@ -1,0 +1,9 @@
+include ../input-check/input-check
+
+mixin skills(data)
+	+b.skills
+		each item in data
+			+e('ul')(class='column-#{item.column}')
+				each skill in item.content
+					+e('li').item
+						+input-check(skill, item.column)

@@ -1,0 +1,10 @@
+[
+	{
+		"label": "Дата заполнения",
+		"attributes": {
+			"name": "date",
+			"value": "15.12.2016",
+			"placeholder": "01.01.2016"
+		}
+	}
+]

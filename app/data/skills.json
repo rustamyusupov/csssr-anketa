@@ -1,0 +1,150 @@
+[
+	{
+		"column": "first",
+		"content": [
+			{
+				"label": "БЭМ/OOCSS",
+				"attributes": {
+					"name": "methodology",
+					"checked": true
+				}
+			},
+			{
+				"label": "Pug (Jade)",
+				"attributes": {
+					"name": "pug",
+					"checked": true
+				}
+			},
+			{
+				"label": "Stylus/LESS/SASS",
+				"attributes": {
+					"name": "stylesheet",
+					"checked": true
+				}
+			},
+			{
+				"label": "Работаю с SVG",
+				"attributes": {
+					"name": "svg",
+					"checked": true
+				}
+			},
+			{
+				"label": "Верстаю семантично",
+				"attributes": {
+					"name": "semantic",
+					"checked": true
+				}
+			},
+			{
+				"label": "Accessibility (A11Y)",
+				"attributes": {
+					"name": "accessibility",
+					"checked": false
+				}
+			},
+			{
+				"label": "ES2015/ES2016",
+				"attributes": {
+					"name": "javascript",
+					"checked": true
+				}
+			}
+		]
+	},
+	{
+		"column": "second",
+		"content": [
+			{
+				"label": "Gulp/GRUNT",
+				"attributes": {
+					"name": "automate",
+					"checked": true
+				}
+			},
+			{
+				"label": "Webpack",
+				"attributes": {
+					"name": "webpack",
+					"checked": false
+				}
+			},
+			{
+				"label": "Дружу с <span>WebGL</span>",
+				"attributes": {
+					"name": "webgl",
+					"checked": false
+				}
+			},
+			{
+				"label": "jQuery",
+				"attributes": {
+					"name": "jquery",
+					"checked": true
+				}
+			},
+			{
+				"label": "Знаю/изучаю Angular",
+				"attributes": {
+					"name": "angular",
+					"checked": false
+				}
+			},
+			{
+				"label": "Знаю/изучаю React",
+				"attributes": {
+					"name": "react",
+					"checked": false
+				}
+			},
+			{
+				"label": "Знаю/изучаю Node.js",
+				"attributes": {
+					"name": "node",
+					"checked": false
+				}
+			}
+		]
+	},
+	{
+		"column": "third",
+		"content": [
+			{
+				"label": "Использую Git",
+				"attributes": {
+					"name": "git",
+					"checked": true
+				}
+			},
+			{
+				"label": "С <span>глазомером</span> <span>всё</span> <span>ок</span>",
+				"attributes": {
+					"name": "accurate-eye",
+					"checked": true
+				}
+			},
+			{
+				"label": "Читаю <a href='http://blog.csssr.ru/'>blog.csssr.ru</a>",
+				"attributes": {
+					"name": "csssr-blog",
+					"checked": true
+				}
+			},
+			{
+				"label": "Я ленивый(-ая)",
+				"attributes": {
+					"name": "lazy",
+					"checked": false
+				}
+			},
+			{
+				"label": "У меня хороший английский",
+				"attributes": {
+					"name": "english",
+					"checked": true
+				}
+			}
+		]
+	}
+]

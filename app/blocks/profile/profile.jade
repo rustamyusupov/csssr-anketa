@@ -16,7 +16,8 @@ mixin profile()
 		+section.personal
 			+subtitle
 				| Персональные данные
-			+input-text(data.personal)
+			+input-text( getData('personal0') )
+
 		+section.skills
 			+subtitle
 				| Расскажите о себе чекбоксами
@@ -32,14 +33,16 @@ mixin profile()
 				| Расскажите о себе словами
 			+description
 				| Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
-			+textarea(data.summary)
+			+textarea( getData('summary0') )
+
 		+section.plans
 			+subtitle
 				| Какие у вас планы на будущее?
 			+description
 				| Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
-			+input-radio(data.plans)
+			+plans( getData('plans0') )
+
 		+section.date
 			+subtitle
 				| Дата
-			+input-text(data.date)
+			+input-text( getData('date0') )

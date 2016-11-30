@@ -1,0 +1,34 @@
+[
+	{
+		"label": "Верстать",
+		"attributes": {
+			"id": "markup",
+			"name": "plans",
+			"checked": false
+		}
+	},
+	{
+		"label": "Прокачиваться в JS",
+		"attributes": {
+			"id": "js",
+			"name": "plans",
+			"checked": true
+		}
+	},
+	{
+		"label": "Менеджерство",
+		"attributes": {
+			"id": "manage",
+			"name": "plans",
+			"checked": false
+		}
+	},
+	{
+		"label": "Другое",
+		"attributes": {
+			"id": "other",
+			"name": "plans",
+			"checked": false
+		}
+	}
+]
