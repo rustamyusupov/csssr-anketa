@@ -1,0 +1,7 @@
+include ../input-radio/input-radio
+
+mixin plans(data)
+	+b('ul').plans
+		each item in data
+			+e('li')(class='item_indent_#{item.attributes.id}')
+				+input-radio(item)

@@ -1,3 +1,4 @@
 mixin textarea(data)
-	+b('textarea').textarea&attributes({'id': data.attributes.name}, data.attributes)
-		| !{data.value}
+	each item in data
+		+b('textarea').textarea&attributes({'id': item.attributes.name}, item.attributes)
+			| !{item.value}
