@@ -1,4 +1,9 @@
 mixin textarea(data)
 	each item in data
-		+b('textarea').textarea&attributes({'id': item.attributes.name}, item.attributes)
-			| !{item.value}
+		+b('div').textarea&attributes({
+			'role': 'textbox',
+			'id': item.attributes.name,
+			'contenteditable': 'true'
+		}, item.attributes) !{item.value}
+
+	//- Использовал div вместо textarea т.к. есть баг в jade – переводы строк и пробелы, в данном случае через каждые три строки. Whitespace in textarea – https://github.com/pugjs/pug/issues/1931

@@ -3,13 +3,19 @@
 	padding-left 2px
 	overflow hidden
 	width 100%
+	min-height 188px
 	font-family font-answer
 	font-size 30px
 	line-height 60px
+	cursor text
 	resize none
 	color color-font-answer
 	background transparent url('../images/line.png') 0 -1px repeat-y
 	border none
 
-	&::-webkit-input-placeholder
+	&:empty:not(:focus):before
+		display block
+		width 250px
+		height 128px
+		content attr(data-placeholder)
 		color color-placeholder
