@@ -6,15 +6,33 @@
 		left -1px
 		margin-bottom 4px
 		size(769px, 43px)
-		cursor pointer
 		background transparent url('../images/slider.png') bottom left no-repeat
 
+		&:hover
+			cursor pointer
+
 	&__pointer
-		position absolute
-		top 0
-		left 142px
-		sprite($slider_pointer)
-		/* TODO: почему не псевдоэлемент? */
+		position relative
+		top -18px
+		left 350px
+		display block
+		width 50px
+		height 60px
+
+		&:hover
+			cursor col-resize
+
+		// для удобства на мобильных
+		&:after
+			position absolute
+			top 38%
+			left 50%
+			content ''
+			transform translate(-50%, -38%)
+			sprite($slider_pointer)
+
+		&_transition
+			transition left .3s ease-in-out
 
 	&__list
 		display flex

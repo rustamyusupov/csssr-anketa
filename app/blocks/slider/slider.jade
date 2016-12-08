@@ -2,7 +2,7 @@ mixin slider(data)
 	each item in data
 		+b.slider&attributes(attributes)
 			+e.scale
-				+e('span').pointer
+				+e('span').pointer&attributes({'data-value': item.value})
 			+e('ul').list&attributes(attributes)
 				each level in item.levels
 					+e('li').item

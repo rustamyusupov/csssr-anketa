@@ -5,6 +5,8 @@
 // 	svg4everybody();
 // });
 
+import slider from '../blocks/slider/slider';
 import summary from '../blocks/textarea/textarea';
 
+slider();
 summary();
