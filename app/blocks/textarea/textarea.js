@@ -3,7 +3,7 @@ export default() => {
 
 	// удаляет лишние теги
 	// теги остаются после выделение всего содержимого в div и удаления
-	textarea.addEventListener('focusout', () => {
+	textarea.addEventListener('blur', () => {
 		if (!textarea.textContent.replace(' ', '').length) {
 			textarea.innerHTML = '';
 		}

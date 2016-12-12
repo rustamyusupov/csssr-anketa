@@ -3,6 +3,7 @@
 		"label": "Полное ФИО",
 		"attributes": {
 			"name": "name",
+			"type": "text",
 			"value": "Юсупов Рустам Фаязович",
 			"placeholder": "Иванов Иван Иванович"
 		}
@@ -11,6 +12,7 @@
 		"label": "Год рождения",
 		"attributes": {
 			"name": "year",
+			"type": "text",
 			"value": "1980",
 			"placeholder": "1990"
 		}
@@ -19,6 +21,7 @@
 		"label": "Место жительства",
 		"attributes": {
 			"name": "place",
+			"type": "text",
 			"value": "г. Нижневартовск, Россия",
 			"placeholder": "г. Иваново, Россия"
 		}
@@ -27,6 +30,7 @@
 		"label": "Скайп",
 		"attributes": {
 			"name": "skype",
+			"type": "text",
 			"value": "rf.yusupov",
 			"placeholder": "ivanov"
 		}
@@ -35,6 +39,7 @@
 		"label": "Почта",
 		"attributes": {
 			"name": "email",
+			"type": "email",
 			"value": "rustam.yusupov@gmail.com",
 			"placeholder": "ivanov@gmail.com"
 		}
