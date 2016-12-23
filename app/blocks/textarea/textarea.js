@@ -3,7 +3,7 @@ export default() => {
 	const textarea = document.querySelector('.textarea');
 
 	textarea.addEventListener('keyup', () => {
-		input.value = textarea.outerText;
+		input.setAttribute('value', textarea.textContent);
 	});
 
 	textarea.addEventListener('blur', () => {

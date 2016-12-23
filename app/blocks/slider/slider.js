@@ -43,7 +43,7 @@ export default() => {
 		let pos = coordX - sliderWindowOffset - window.pageXOffset - pointerHalfWidth;
 
 		// если ушли за левую границу
-		if (pos + pointerHalfWidth < 0) {
+		if (pos + pointerHalfWidth <= 0) {
 			pos = sliderLeftEdge;
 		}
 		// если ушли за правую границу
@@ -52,7 +52,7 @@ export default() => {
 		}
 
 		pointer.style.left = pos + 'px';
-		input.value = pos - sliderLeftEdge;
+		input.setAttribute('value', pos - sliderLeftEdge);
 	}
 
 	if (isLevelValid) {
