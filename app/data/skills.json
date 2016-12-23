@@ -142,7 +142,7 @@
 				"label": "У меня хороший английский",
 				"attributes": {
 					"name": "english",
-					"checked": true
+					"checked": false
 				}
 			}
 		]
