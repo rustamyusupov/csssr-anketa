@@ -6,7 +6,10 @@
 		left -1px
 		margin-bottom 4px
 		size(769px, 43px)
-		background transparent url('../images/slider.png') bottom left no-repeat
+		background-color transparent
+		background-image url('../images/slider.png')
+		background-repeat no-repeat
+		background-position bottom left
 
 		&:hover
 			cursor pointer
@@ -19,9 +22,6 @@
 		width 50px
 		height 60px
 
-		&:hover
-			cursor col-resize
-
 		// для удобства на мобильных размер "захвата" увеличен
 		&:after
 			position absolute
@@ -30,6 +30,9 @@
 			content ''
 			transform translate(-50%, -38%)
 			sprite($slider_pointer)
+
+		&:hover
+			cursor col-resize
 
 		&_transition
 			transition left .3s ease-in-out

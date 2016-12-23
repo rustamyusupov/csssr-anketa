@@ -11,23 +11,23 @@
 	&__label
 		padding-left 19px
 
-	&__label::before
-		position absolute
-		top -2px
-		left 1px
-		content ''
-		sprite ($radio)
-
-	&__label_indent_markup::before
-		left -1px
-
-	&__label_indent_other
-		position relative
-		bottom 1px
-
 		&::before
-			top -1px
-			left -13px
+			position absolute
+			top -2px
+			left 1px
+			content ''
+			sprite ($radio)
+
+		&_indent_markup::before
+			left -1px
+
+		&_indent_other
+			position relative
+			bottom 1px
+
+			&::before
+				top -1px
+				left -13px
 
 	&__field
 		opacity 0
