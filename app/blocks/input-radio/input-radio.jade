@@ -1,7 +1,9 @@
 mixin input-radio(data)
 	+b('label').input-radio
-		+e('input')(class='field_indent_#{data.attributes.id}')&attributes({
-			'value': data.label,
-			'type': 'radio'
-		}, data.attributes)
+		+e('input')(
+			class='field_indent_#{data.attributes.id}'
+			type='radio'
+			value=data.label
+		)&attributes(data.attributes)
+
 		+e('span')(class='label_indent_#{data.attributes.id}') !{data.label}

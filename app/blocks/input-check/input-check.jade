@@ -1,8 +1,9 @@
 mixin input-check(item, column)
 	+b('label')(class='input-check_column_#{column}')
-		+e('input').field&attributes({
-			'id': item.attributes.name,
-			'value': item.label,
-			'type': 'checkbox'
-		}, item.attributes)
+		+e('input').field(
+			id=item.attributes.name
+			value=item.label
+			type='checkbox'
+		)&attributes(item.attributes)
+
 		+e('span')(class='label_indent_#{item.attributes.name}') !{item.label}

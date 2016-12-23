@@ -1,25 +1,16 @@
 export default() => {
 	const WIDTH_SEPARATOR = 4;
-	const SECOND_SLIDER_LEVEL = 125;
-	const THIRD_SLIDER_LEVEL = 350;
 	const TRANSITION_ON = 'slider__pointer_transition';
 
 	const slider = document.querySelector('.slider__scale');
+	const input = document.querySelector('.slider__input');
 	const pointer = document.querySelector('.slider__pointer');
 
 	const halfWidthPointer = pointer.offsetWidth / 2 || 0;
 	const halfWidthSeparator = WIDTH_SEPARATOR / 2 || 0;
 
-	// уровни слайдера
-	const sliderLevels = {
-		1: 0 - halfWidthPointer + halfWidthSeparator,
-		2: SECOND_SLIDER_LEVEL,
-		3: THIRD_SLIDER_LEVEL,
-		4: slider.offsetWidth - halfWidthPointer - halfWidthSeparator
-	};
-
-	// уровень пользователя
-	const level = parseInt(pointer.dataset.value, 10);
+	const SLIDER_LEVEL_NO = 0 - halfWidthPointer + halfWidthSeparator;
+	const SLIDER_LEVEL_WRITE = slider.offsetWidth - halfWidthPointer - halfWidthSeparator;
 
 	// двигает указатель
 	function movePointer(evt) {
@@ -40,11 +31,12 @@ export default() => {
 		let pos = coordX - sliderWindowOffset - window.pageXOffset - halfWidthPointer;
 
 		// если ушли за левую границу
-		if (pos < 0) {pos = sliderLevels[1];}
+		if (pos + halfWidthPointer < 0) {pos = SLIDER_LEVEL_NO;}
 		// если ушли за правую границу
-		if (pos > sliderLevels[4]) {pos = sliderLevels[4];}
+		if (pos > SLIDER_LEVEL_WRITE) {pos = SLIDER_LEVEL_WRITE;}
 
 		pointer.style.left = pos + 'px';
+		input.value = pos - SLIDER_LEVEL_NO;
 	}
 
 	pointer.addEventListener('mousedown', () => {
@@ -75,5 +67,8 @@ export default() => {
 	});
 
 	// начальное значение
-	if (level) {pointer.style.left = sliderLevels[level] + 'px';}
+	const level = parseInt(input.value, 10) + SLIDER_LEVEL_NO;
+	const isValidLevel = level >= SLIDER_LEVEL_NO && level <= SLIDER_LEVEL_WRITE;
+
+	if (isValidLevel) {pointer.style.left = level + 'px';}
 };

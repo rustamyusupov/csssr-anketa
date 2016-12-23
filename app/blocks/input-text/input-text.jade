@@ -1,5 +1,12 @@
 mixin input-text(data)
 	each item in data
 		+b(class='input-text_indent_#{item.attributes.name}')
-			+e('label')(class='label_indent_#{item.attributes.name}')&attributes({'for':item.attributes.name}) #{item.label}
-			+e('input')(class='field_indent_#{item.attributes.name}')&attributes({'id':item.attributes.name}, item.attributes)
+			+e('label')(
+				class='label_indent_#{item.attributes.name}'
+				for='#{item.attributes.name}'
+			) #{item.label}
+
+			+e('input')(
+				class='field_indent_#{item.attributes.name}'
+				id='#{item.attributes.name}'
+			)&attributes(item.attributes)

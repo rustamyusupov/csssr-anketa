@@ -2,9 +2,9 @@ mixin title()
 	+b.title&attributes(attributes)
 		+e('h1').text
 			block
-		+e('img').image&attributes({
-			'src': 'assets/images/case.png',
-			'width': '221',
-			'height': '118',
-			'alt': 'Заголовок Дело'
-		})
+		+e('img').image(
+			src='assets/images/case.png'
+			width=221
+			height=118
+			alt='Заголовок Дело'
+		)

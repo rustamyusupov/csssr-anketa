@@ -1,10 +1,12 @@
 mixin textarea(data)
 	each item in data
-		+b('div').textarea&attributes({
-			'role': 'textbox',
-			'contenteditable': 'true'
-		}, item.attributes) !{item.value}
+		+e('input').input#summary(
+			type='hidden'
+			value=item.value
+		)
+		+b('div').textarea(
+			role='textbox'
+			contenteditable='true'
+		)&attributes(item.attributes) !{item.value}
 
 	//- Использовал div вместо textarea т.к. есть баг в jade – переводы строк и пробелы, в данном случае через каждые три строки. Whitespace in textarea – https://github.com/pugjs/pug/issues/1931
-	//- для textarea добавить 'id': item.attributes.name,
-	//- в summary.json "name": "summary", "rows": 3,

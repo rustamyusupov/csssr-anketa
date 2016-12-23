@@ -1,5 +1,10 @@
 export default() => {
+	const input = document.querySelector('.profile__input');
 	const textarea = document.querySelector('.textarea');
+
+	textarea.addEventListener('keyup', () => {
+		input.value = textarea.outerText;
+	});
 
 	// удаляет лишние теги
 	// теги остаются после выделение всего содержимого в div и удаления
