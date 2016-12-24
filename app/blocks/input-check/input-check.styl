@@ -1,5 +1,4 @@
 .input-check
-	position relative
 	display flex
 	flex-wrap nowrap
 	font-size 21px
@@ -9,16 +8,14 @@
 	color color-black
 
 	&_column_second &__label
-		padding-left 12px
+		padding-left 26px
 
 	&_column_third &__label
-		padding-left 11px
-
-		&_indent_english
-			padding-left 13px
+		padding-left 25px
 
 	&__label
-		padding-left 14px
+		position relative
+		padding-left 28px
 
 		&::before
 			position absolute
@@ -66,7 +63,7 @@
 				background-color color-link
 
 	&__field
-		opacity 0
+		display none
 
 	&__field:checked + &__label::after
 		position absolute

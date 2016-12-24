@@ -9,7 +9,8 @@
 	color color-black
 
 	&__label
-		padding-left 19px
+		position relative
+		padding-left 33px
 
 		&::before
 			position absolute
@@ -27,10 +28,9 @@
 
 			&::before
 				top -1px
-				left -13px
 
 	&__field
-		opacity 0
+		display none
 
 	&__field:checked + &__label::after
 		position absolute
@@ -44,4 +44,3 @@
 
 	&__field_indent_other:checked + &__label::after
 		top 7px
-		left -5px

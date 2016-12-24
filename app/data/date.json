@@ -3,7 +3,7 @@
 		"label": "Дата заполнения",
 		"attributes": {
 			"name": "date",
-			"value": "23.12.2016",
+			"value": "24.12.2016",
 			"placeholder": "01.01.2016"
 		}
 	}
